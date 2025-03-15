@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Арома Кафе</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/menu.css">
+</head>
+<body>
+      <!-- Шапка -->
+      <header class="page-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <i class="fas fa-mug-hot logo-icon"></i>
+                    <span class="logo-text">Арома Кафе</span>
+                </a>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html" class="active">Меню</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Мобильная навигация -->
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html" class="active">Меню</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Баннер меню -->
+    <section class="menu-banner">
+        <div class="container">
+            <h1>Наше меню</h1>
+            <p>Откройте для себя разнообразие вкусов в Арома Кафе</p>
+        </div>
+    </section>
+    
+    <!-- Категории меню -->
+    <section class="menu-categories">
+        <div class="container">
+            <div class="categories-tabs">
+                <button class="category-tab active" data-category="all">Все</button>
+                <button class="category-tab" data-category="coffee">Кофе</button>
+                <button class="category-tab" data-category="tea">Чай</button>
+                <button class="category-tab" data-category="dessert">Десерты</button>
+                <button class="category-tab" data-category="breakfast">Завтраки</button>
+                <button class="category-tab" data-category="lunch">Обеды</button>
+            </div>
+            
+            <div class="menu-items-container">
+                <!-- Кофе -->
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1337&q=80" alt="Эспрессо">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Эспрессо</h3>
+                            <div class="price">150 ₽</div>
+                        </div>
+                        <p>Классический итальянский эспрессо из свежеобжаренных зерен арабики.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Капучино">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Капучино</h3>
+                            <div class="price">220 ₽</div>
+                        </div>
+                        <p>Эспрессо с добавлением взбитого молока и нежной молочной пены.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80" alt="Латте">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Латте</h3>
+                            <div class="price">250 ₽</div>
+                        </div>
+                        <p>Эспрессо с большим количеством взбитого молока и тонким слоем молочной пены.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Чай -->
+                <div class="menu-item" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Зеленый чай">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Зеленый чай</h3>
+                            <div class="price">180 ₽</div>
+                        </div>
+                        <p>Классический зеленый чай с нежным травяным ароматом.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Черный чай">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Черный чай</h3>
+                            <div class="price">180 ₽</div>
+                        </div>
+                        <p>Крепкий черный чай с насыщенным вкусом и ароматом.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Фруктовый чай">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Фруктовый чай</h3>
+                            <div class="price">200 ₽</div>
+                        </div>
+                        <p>Ароматный чай с добавлением натуральных фруктов и ягод.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Десерты -->
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="Чизкейк">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Чизкейк</h3>
+                            <div class="price">280 ₽</div>
+                        </div>
+                        <p>Нежный чизкейк с ванильным вкусом и ягодным соусом.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1286&q=80" alt="Тирамису">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Тирамису</h3>
+                            <div class="price">300 ₽</div>
+                        </div>
+                        <p>Классический итальянский десерт с кофейным вкусом и нежным кремом.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Шоколадный фондан">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Шоколадный фондан</h3>
+                            <div class="price">320 ₽</div>
+                        </div>
+                        <p>Теплый шоколадный кекс с жидкой начинкой и шариком мороженого.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Завтраки -->
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Омлет с овощами">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Омлет с овощами</h3>
+                            <div class="price">280 ₽</div>
+                        </div>
+                        <p>Пышный омлет с сезонными овощами и зеленью.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1349&q=80" alt="Панкейки">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Панкейки</h3>
+                            <div class="price">250 ₽</div>
+                        </div>
+                        <p>Пышные американские панкейки с кленовым сиропом и свежими ягодами.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80" alt="Авокадо тост">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Авокадо тост</h3>
+                            <div class="price">270 ₽</div>
+                        </div>
+                        <p>Тост из цельнозернового хлеба с пюре из авокадо, яйцом пашот и микрозеленью.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Обеды -->
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Паста Карбонара">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Паста Карбонара</h3>
+                            <div class="price">380 ₽</div>
+                        </div>
+                        <p>Классическая итальянская паста с беконом, яйцом и сыром пармезан.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1322&q=80" alt="Цезарь с курицей">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Цезарь с курицей</h3>
+                            <div class="price">350 ₽</div>
+                        </div>
+                        <p>Свежий салат с куриным филе, хрустящими гренками, сыром пармезан и соусом цезарь.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Пицца Маргарита">
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Пицца Маргарита</h3>
+                            <div class="price">400 ₽</div>
+                        </div>
+                        <p>Традиционная итальянская пицца с томатным соусом, моцареллой и свежим базиликом.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <button class="btn add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Корзина -->
+    <button class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </button>
+    
+    <div class="cart-overlay"></div>
+    
+    <div class="cart-container">
+        <div class="cart-header">
+            <h3>Ваша корзина</h3>
+            <button class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Здесь будут элементы корзины -->
+            <div class="empty-cart-message">Ваша корзина пуста</div>
+        </div>
+        
+        <div class="cart-total">
+            <p>Итого: <span>0 ₽</span></p>
+            <button class="btn checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+    
+      <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <i class="fas fa-mug-hot logo-icon"></i>
+                    <span class="logo-text">Арома Кафе</span>
+                    <p>Качественный кофе и еда с 2010 года</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Кофейная 123, Москва, Россия</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@aromacafe.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 7:00-20:00, Сб-Вс: 8:00-21:00</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Арома Кафе. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/menu.js"></script>
+</body>
+</html>

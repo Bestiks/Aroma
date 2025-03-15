@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Арома Кафе</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/reviews.css">
+</head>
+<body>
+   <!-- Шапка -->
+   <header class="page-header">
+    <div class="header-content">
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <i class="fas fa-mug-hot logo-icon"></i>
+                <span class="logo-text">Арома Кафе</span>
+            </a>
+        </div>
+        
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html" class="active">Отзывы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <div class="mobile-menu-btn">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильная навигация -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="reviews.html" class="active">Отзывы</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </div>
+</header>
+    
+    <!-- Баннер отзывов -->
+    <section class="reviews-banner">
+        <div class="container">
+            <h1>Отзывы клиентов</h1>
+            <p>Узнайте, что говорят наши клиенты о своем опыте в Арома Кафе</p>
+        </div>
+    </section>
+    
+    <!-- Статистика отзывов -->
+    <section class="reviews-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">4.8</div>
+                    <div class="stat-label">Общий рейтинг</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="stat-info">На основе 512 отзывов</div>
+                </div>
+                
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <div class="rating-label">5 Звезд</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 75%"></div>
+                        </div>
+                        <div class="rating-count">384</div>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <div class="rating-label">4 Звезды</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 15%"></div>
+                        </div>
+                        <div class="rating-count">77</div>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <div class="rating-label">3 Звезды</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 7%"></div>
+                        </div>
+                        <div class="rating-count">36</div>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <div class="rating-label">2 Звезды</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 2%"></div>
+                        </div>
+                        <div class="rating-count">10</div>
+                    </div>
+                    
+                    <div class="rating-bar">
+                        <div class="rating-label">1 Звезда</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 1%"></div>
+                        </div>
+                        <div class="rating-count">5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Фильтр отзывов -->
+    <section class="reviews-filter">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="sort-by">Сортировать по:</label>
+                    <select id="sort-by" class="filter-select">
+                        <option value="newest">Сначала новые</option>
+                        <option value="highest">Высокий рейтинг</option>
+                        <option value="lowest">Низкий рейтинг</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filter-rating">Фильтр по рейтингу:</label>
+                    <select id="filter-rating" class="filter-select">
+                        <option value="all">Все рейтинги</option>
+                        <option value="5">5 Звезд</option>
+                        <option value="4">4 Звезды</option>
+                        <option value="3">3 Звезды</option>
+                        <option value="2">2 Звезды</option>
+                        <option value="1">1 Звезда</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Список отзывов -->
+    <section class="reviews-list">
+        <div class="container">
+            <div class="reviews-grid">
+                <!-- Отзыв 1 -->
+                <div class="review-card" data-rating="5" data-date="2023-06-15">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клиент" class="customer-img">
+                        <div>
+                            <h3>Елена Иванова</h3>
+                            <div class="review-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="review-date">15 июня 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Лучший кофе, который я когда-либо пробовала! Атмосфера уютная, а персонал невероятно дружелюбный. Я прихожу сюда каждое утро перед работой. Их выпечка тоже потрясающая - особенно рекомендую миндальный круассан. Это место стало моим вторым домом!"</p>
+                    </div>
+                    <div class="review-footer">
+                        <div class="review-likes">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> Полезно (24)</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Отзыв 2 -->
+                <div class="review-card" data-rating="4" data-date="2023-06-10">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клиент" class="customer-img">
+                        <div>
+                            <h3>Михаил Смирнов</h3>
+                            <div class="review-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="review-date">10 июня 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Их тост с авокадо просто восхитителен! Свежие ингредиенты и щедрые порции. В кафе отличная атмосфера как для работы, так и для общения. Единственная причина, по которой я ставлю 4 звезды вместо 5, это то, что в часы пик здесь может быть довольно многолюдно, но это лишь свидетельство того, насколько хорошо это место."</p>
+                    </div>
+                    <div class="review-footer">
+                        <div class="review-likes">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> Полезно (18)</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Отзыв 3 -->
+                <div class="review-card" data-rating="5" data-date="2023-06-05">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Клиент" class="customer-img">
+                        <div>
+                            <h3>София Петрова</h3>
+                            <div class="review-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="review-date">5 июня 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Я отмечала здесь свой день рождения, и это было идеально! Персонал сделал все возможное, чтобы сделать его особенным. Выпечка абсолютно восхитительна. Все в моей группе были впечатлены как едой, так и обслуживанием. Я обязательно вернусь и буду рекомендовать это место всем своим друзьям."</p>
+                    </div>
+                    <div class="review-footer">
+                        <div class="review-likes">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> Полезно (32)</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Отзыв 4 -->
+                <div class="review-card" data-rating="5" data-date="2023-05-28">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Клиент" class="customer-img">
+                        <div>
+                            <h3>Дмитрий Волков</h3>
+                            <div class="review-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="review-date">28 мая 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Как ценитель кофе, я могу с уверенностью сказать, что Арома Кафе подает один из лучших кофе в городе. Их внимание к деталям в процессе приготовления очевидно в каждой чашке. Бариста знающие и всегда готовы обсудить различные методы заваривания. Обязательно к посещению для любого любителя кофе!"</p>
+                    </div>
+                    <div class="review-footer">
+                        <div class="review-likes">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> Полезно (41)</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Отзыв 5 -->
+                <div class="review-card" data-rating="3" data-date="2023-05-20">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Клиент" class="customer-img">
+                        <div>
+                            <h3>Анна Соколова</h3>
+                            <div class="review-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="review-date">20 мая 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Еда и кофе хорошие, но я нашла цены немного высокими для того, что вы получаете. Обслуживание было нормальным, но пришлось довольно долго ждать наш заказ. Атмосфера приятная, и у них хороший Wi-Fi, если вам нужно поработать."</p>
+                    </div>
+                    <div class="review-footer">
+                        <div class="review-likes">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> Полезно (8)</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Отзыв 6 -->
+                <div class="review-card" data-rating="5" data-date="2023-05-15">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Клиент" class="customer-img">
+                        <div>
+                            <h3>Роберт Новиков</h3>
+                            <div class="review-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="review-date">15 мая 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Я хожу в Арома Кафе уже много лет, и они никогда не разочаровывают. Качество остается стабильным, и они всегда вводят новые сезонные позиции, чтобы было интересно. Персонал помнит постоянных клиентов, что добавляет личный штрих к опыту. Очень рекомендую!"</p>
+                    </div>
+                    <div class="review-footer">
+                        <div class="review-likes">
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> Полезно (29)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кнопка загрузки дополнительных отзывов -->
+            <div class="center">
+                <button class="btn load-more-btn">Загрузить больше отзывов</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Раздел написания отзыва -->
+    <section class="write-review">
+        <div class="container">
+            <h2 class="section-title">Поделитесь своим опытом</h2>
+            <div class="review-form-container">
+                <form class="review-form">
+                    <div class="form-group">
+                        <label for="review-name">Ваше имя</label>
+                        <input type="text" id="review-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-email">Ваш Email</label>
+                        <input type="email" id="review-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Ваша оценка</label>
+                        <div class="rating-select">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="review-rating" value="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-content">Ваш отзыв</label>
+                        <textarea id="review-content" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review-image">Добавить фото (опционально)</label>
+                        <input type="file" id="review-image" accept="image/*" multiple>
+                    </div>
+                    
+                    <button type="submit" class="btn">Отправить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Подвал -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <i class="fas fa-mug-hot logo-icon"></i>
+                    <span class="logo-text">Арома Кафе</span>
+                    <p>Качественный кофе и еда с 2010 года</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Кофейная 123, Москва, Россия</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@aromacafe.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 7:00-20:00, Сб-Вс: 8:00-21:00</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Арома Кафе. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/reviews.js"></script>
+</body>
+</html>
